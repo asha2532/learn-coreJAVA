@@ -9,28 +9,35 @@
 
 <body>
   <pre>
-    class ClaExample {
-
-        public static void main(String st[]) {
-            
-            if (st.length &gt 0) {
-                System.out.println("Command line arguments:");
-    
-               
-                for (int i = 0; i &lt st.length; i++) {
-                    System.out.println("Argument " + (i + 1) + ": " + st[i]);
-                }
-            } else {
-                System.out.println("No command line arguments provided.");
-            }
-        }
+    class main25
+    {
+    public static void main(String st[])
+    {
+    String str="You are mad , yes you are";
+    System.out.println("Duplicate words:" + findDuplicate(str));
     }
     
+    public static String findDuplicate(String str)
+    {
+    String words[]=str.split(" ");
+    String duplicateWords=" ";
+    
+    for(int i=0;i&ltwords.length;i++)
+    {
+    for(int j=i+1;j&ltwords.length;j++)
+    {
+    if(words[i].equals(words[j]) &&! duplicateWords.contains(words[i]))
+    {
+    duplicateWords+=words[i] + " ";
+    }
+    }
+    }
+    return duplicateWords.trim();
+    }
+    }
+
     OUTPUT:
-    ommand line arguments:
-    Argument 1: 12
-    Argument 1: 234
-    Argument 1: 56
+    Dupicate words:are
   </pre>
 </body>
 

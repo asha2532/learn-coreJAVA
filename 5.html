@@ -9,14 +9,22 @@
 
 <body>
   <pre>
-    package myPackage;
-    class A
-    {}
+    class main5
+    {
+    public static void main(String st[])
+    {
+    StringBuffer obj=new StringBuffer("hii");
     
-    class B
-    {}
-    class C
-    {}
+    System.out.println("Before append:"+ obj);
+    obj.append("user");
+    
+    System.out.println("After append: " + obj);
+    }
+    }
+
+    OUTPUT:
+    Before append:hii
+    After append:hiiuser 
   </pre>
 </body>
 

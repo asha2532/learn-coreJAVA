@@ -9,19 +9,33 @@
 
 <body>
   <pre>
-    import java.util.Date;
+    class main3
+{
+public static void main(String st[])
+{
+String str="hello";
+String str1=str;
 
-    class main3 extends Date
-    {
-    public static void main(String st[])
-    {
-    main3 obj=new main3();
-    System.out.println("Current date:" + obj);
-    }
-    }
-    
-    OUTPUT:
-    Current date:Sun Sep 08 16:51:44 IST 2024
+System.out.println("Before modification:" );
+System.out.println("Original String :" + str);
+System.out.println("Modified string:" + str1);
+
+str1=str1+"Sir";
+
+System.out.println("\nAfter modification:");
+System.out.println("Original string:" + str);
+System.out.println("Modified string:" + str1);
+}
+}
+
+OUTPUT:
+Before modification:
+Original String :hello
+Modified string:hello
+
+After modification:
+Original string:hello
+Modified string:helloSir
   </pre>
 </body>
 

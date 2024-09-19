@@ -9,62 +9,35 @@
 
 <body>
   <pre>
-    class BankAccount {
-        private String accountNumber;
-        private double balance;
+    class main27
+    {
+    public static void main(String st[])
+    {
+    String str="she is good at mathematics";
+    String words[]=str.split(" ");
+    String largestWord=words[0];
+    String smallestWord=words[0];
     
-         BankAccount(String accountNumber, double balance) {
-            this.accountNumber = accountNumber;
-            this.balance = balance;
-        }
+    for(int i=1;i&ltwords.length;i++)
+    {
+    if(words[i].length()&gtlargestWord.length())
+    {
+    largestWord=words[i];
+    }
     
-         String getAccountNumber() {
-            return accountNumber;
-        }
-    
-         void setAccountNumber(String accountNumber) {
-            this.accountNumber = accountNumber;
-        }
-    
-         double getBalance() {
-            return balance;
-        }
-    
-        void setBalance(double balance) {
-            if (balance >= 0) {
-                this.balance = balance;
-            } else {
-                System.out.println("Balance cannot be negative.");
-            }
-        }
-    
-        void displayAccountInfo() {
-            System.out.println("Account Number: " + accountNumber);
-            System.out.println("Balance: $" + String.format("%.2f", balance));
-        }
-    
-        public static void main(String[] args) {
-           
-            BankAccount account = new BankAccount("123456789", 1000.50);
-            account.displayAccountInfo();
-            account.setAccountNumber("987654321");
-            account.setBalance(2000.75);
-            System.out.println("\nUpdated Account Information:");
-            account.displayAccountInfo();
-    
-            
-            account.setBalance(-500.00);
-        }
+    if(words[i].length()&ltsmallestWord.length())
+    {
+    smallestWord=words[i];
+    }
+    }
+    System.out.println("Largest word:" + largestWord);
+    System.out.println("Smallest word:" + smallestWord);
+    }
     }
 
-     OUTPUT:
-     Account Number: 123456789
-     Balance: $1000.50
-
-     Updated Account Information:
-     Account Number: 987654321
-     Balance: $2000.75
-     Balance cannot be negative.
+    OUTPUT:
+    Largest word:athematics
+    Smallest word:is
   </pre>
 </body>
 

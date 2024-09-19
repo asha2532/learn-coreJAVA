@@ -9,43 +9,32 @@
 
 <body>
   <pre>
-    package c4.sample;
-
-    public class Myclas
+    class main9
     {
-    protected int var1=10;
-    protected void method()
+    public static void main(String st[])
     {
-    System.out.println("protected method called");
+    String str1="listen";
+    String str2="silent";
+    
+    if(areAnagrams(str1 ,str2))
+    {
+    System.out.println(str1 + " and " + str2 + " are anagrams.");
+    }else
+    {
+    System.out.println(str1 + " and " + str2 + "are not anagrams.");
     }
     }
-
-    package c4.sample;
-public class Aclass extends Myclas
-{
-public static void main(String st[])
-{
- Aclass obj= new Aclass();
-System.out.println("protected var1:" + obj.var1);
-obj.method();
-}
-}
-
-import c4.sample.Myclas;
-
-public class outside extends Myclas
-{
-public static void main(String st[])
-{
-outside obj= new outside();
-System.out.println("protected var1:" + obj.var1);
-obj.method();
-}
-}
-
-OUTPUT:
-protected var1=10
-protected method called
+    
+    public static boolean areAnagrams(String str1,String str2)
+    {
+    if(str1.length()!=str2.length())
+    {
+    return false;
+    }
+  }
+    }
+  OUTPUT:
+  listen and silent are anagrams.
   </pre>
 </body>
 

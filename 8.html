@@ -9,43 +9,7 @@
 
 <body>
   <pre>
-    package mypac1;
-    public class First
-    {
-    protected int x=10;
-    protected void printMessage()
-    {
-    System.out.println("hello first class..");
-    }
-    }
-  
-
-    //in another file
-    package mypac1;
-    public class Second extends First
-    {
-
-        protected void accessProtected()
-    {
-      System.out.println("x= " + x);
-       printMessage();
-      }
     
-    }
-      import mypackage.Second;
-
-      class main
-      {
-      public static void main(String st[])
-      {
-      Second obj=new Second();
-      obj.accessProtected();
-      }
-      }
-  
- OUTPUT:
-  x=10
-  hello first class..
   </pre>
 </body>
 

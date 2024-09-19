@@ -9,19 +9,29 @@
 
 <body>
   <pre>
-    import java.util.Date;
-
-    class currentDate
+    class main1
     {
     public static void main(String st[])
     {
-    Date obj= new Date();
-    System.out.println("current date:" + obj);
+    System.out.println(containDigit("123abd"));
+    }
+    
+    public static boolean containDigit(String t)
+    {
+    for(int i=0;i &lt t.length();i++)
+    {
+    if(!Character.isDigit(t.charAt(i)))
+    {
+    return false;
+    }
+    }
+    
+    return true;
     }
     }
 
     OUTPUT:
-    current date: Wed Sep 18 20:44:45 IST 2024
+    false
   </pre>
 </body>
 
