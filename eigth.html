@@ -9,51 +9,43 @@
 
 <body>
   <pre>
-    interface Playable
-    { 
-       void play();
-    }
-   
-   class Football implements Playable
-     {
-        public void play()
-           {
-              System.out.println("children are playing football");
-            }
-       }
-   class Vollyball implements Playable
-     {
-         public void play()
-           {
-              System.out.println("children are playing vollyball");
-            }
-       }
-   class Basketball implements Playable
-     {
-         public void play()
-           {
-              System.out.println("children are playing basketball");
-            }
-       }
+    class main8
+    {
+    public static void main(String st[])
+    {
+    int arr[][]={
+          {1,2,3,4},
+          {23,56,21,11},
+          {12,89,90,100},
+          {45,78,55,13}
+    };
     
-   class main
-   {
-     public static void main(String st[])
-      {
-         Playable obj=new Football();
-         Playable obj1=new Vollyball();
-         Playable obj2=new Basketball();
-                    obj.play();
-                    obj1.play();
-                    obj2.play();
-        }
-   }
+    int evenCount=0;
+    int oddCount=0;
+    
+    for(int i=0;i&ltarr.length;i++)
+    {
+    for(int j=0;j&ltarr[i].length;j++)
+    {
+     if(arr[i][j]%2==0)
+    {
+     evenCount++;
+    }else
+    {
+    oddCount++;
+    }
+    }
+    }
+    
+    System.out.println("Frequency of even number:"+ evenCount);
+    
+    System.out.println("Frequency of odd number:"+ oddCount);
+    }
+    }
 
-   
-   OUTPUT:
-   children are playing football
-   children are playing vollyball
-   children are playing basketball
+    OUTPUT:
+    Frequency of even number:7
+    Frequency of odd number:9
   </pre>
 </body>
 

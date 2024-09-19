@@ -9,49 +9,40 @@
 
 <body>
   <pre>
-    interface Flyable
+    class main2
 {
-    void fly_obj();
- }
-class Spacecraft implements Flyable
+public static void main(String st[])
 {
-   public void fly_obj()
-     {
-         System.out.println("Spacecrfat");
-     }
-   }
-class  Airplane implements Flyable
-{
-   public void fly_obj()
-     {
-         System.out.println(" Airplane");
-     }
-   }
+int arr[][]={{1,2,3},{4,5,6}};
+int arr1[][]={{11,12,13},{14,15,16}};
 
-class Helicopter  implements Flyable
+int mult[][]=new int[2][3];
+for(int i=0;i&lt2;i++)
 {
-   public void fly_obj()
-     {
-         System.out.println("Helicopter ");
-     }
-   }
-class main
+for(int j=0;j&lt3;j++)
 {
- public static void main(String st[])
-   {
-      Flyable obj=new Spacecraft();
-      Flyable obj1=new Airplane();
-      Flyable obj2=new Helicopter ();
-                    obj.fly_obj();
-                    obj1.fly_obj();
-                    obj2.fly_obj();
-  }
+ mult[i][j]=arr[i][j]*arr1[i][j];
+}
+}
+System.out.println("the multiplication of two matrix:");
+
+for(int i=0;i&lt2;i++)
+{
+for(int j=0;j&lt3;j++)
+{
+System.out.println("multiplication of two matrics:" +mult[i][j]);
+}
+}
+}
 }
 
 OUTPUT:
-Spacecrfat
-Airplane
-Helicopter
+multiplication of two matrics:11
+multiplication of two matrics:24
+multiplication of two matrics:39
+multiplication of two matrics:56
+multiplication of two matrics:75
+multiplication of two matrics:96
   </pre>
 </body>
 

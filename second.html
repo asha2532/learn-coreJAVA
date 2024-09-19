@@ -9,33 +9,40 @@
 
 <body>
   <pre>
+    class main1
+    {
+    public static void main(String st[])
+    {
+    int arr[][]={{1,2,3},{4,5,6}};
+    int arr1[][]={{11,12,13},{14,15,16}};
     
-    interface animal
+    int sum[][]=new int[2][3];
+    for(int i=0;i&lt2;i++)
     {
-        void bark();
-        void speak();
+    for(int j=0;j&lt3;j++)
+    {
+     sum[i][j]=arr[i][j]+arr1[i][j];
     }
-
-    class dog implements animal
-    {
-        public void bark(){}
-        public void speak()
-        {
-            System.out.println("dog is barking");
-        }
     }
-
-    class main
+    System.out.println("the sum of two matrix:");
+    
+    for(int i=0;i&lt2;i++)
     {
-public static voif=d main(String st[])
-  {
-    animal obj=new dog();
-    obj.speak();
-  }
+    for(int j=0;j&lt3;j++)
+    {
+    System.out.println(" " +sum[i][j]);
+    }
+    }
+    }
     }
 
     OUTPUT:
-    dog is barking
+    sum of two matrics:12
+    sum of two matrics:14
+    sum of two matrics:16
+    sum of two matrics:18
+    sum of two matrics:20
+    sum of two matrics:22
   </pre>
 </body>
 

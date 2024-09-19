@@ -9,51 +9,39 @@
 
 <body>
   <pre>
-    interface Drawable
+    class main6
     {
-       void draw();
+    public static void main(String st[])
+    {
+    int arr[][]={{1,0,0,0},
+                 {4,2,0,0},
+                 {7,5,3,0},
+                 {10,8,6,4}
+                 };
+    
+    System.out.println("Lower triangular matrix:");
+    printLowerMatrix(arr);
     }
     
-    class circle implements Drawable
+    public static void printLowerMatrix(int arr[][])
     {
-       public void draw()
-        {
-         System.out.println("circle is drawing");
-        }
-    }
-    class rectangle implements Drawable
+    for(int i=0;i&ltarr.length;i++)
     {
-       public void draw()
-        {
-         System.out.println("rectangle is drawing");
-        }
-    }
-    
-    class triangle implements Drawable
+    for(int j=0;j&lt=i;j++)
     {
-       public void draw()
-        {
-         System.out.println("triangle is drawing");
-        }
+    System.out.print(arr[i][j]+ " ");
     }
-     class main
-       {
-          public static void main(String st[])
-           {
-              Drawable obj=new circle();
-                         obj.draw();
-              Drawable obj2=new rectangle();
-                         obj2.draw();
-             Drawable obj3=new triangle();
-                         obj3.draw();
-          }
+    System.out.println();
     }
-    
- 
+    }
+    }
+
     OUTPUT:
-    circle is drawing
-    rectangle is drawing
-    triangle is drawing
+    Lower triangular matrix:
+    1
+    4 2
+    7 5 3
+    10 8 6 4
   </pre>
 </body>
 
