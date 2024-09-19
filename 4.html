@@ -9,88 +9,17 @@
 
 <body>
   <pre>
-    class Circle
- {
- 
- private double radius;
-     Circle(double radius)
+    class main4 extends java.util.Date
     {
- 
-       this.radius = radius;
-
-     }
-
- 
-    double getRadius()
+    public static void main(String st[])
     {
-  
-      return radius;
-
-    }
-
-  
-   void setRadius(double radius)
-   {
- 
-        this.radius = radius;
- 
-   }
-
-  
-   public double calculateArea() 
-   {
- 
-       return 3.14159 * radius * radius;
- 
-   }
-
- 
-     public double calculateCircumference()
-    {
- 
-       return 2 * 3.14159 * radius;
-
-    }
-
-   
-
-
-  public static void main(String st[])
- {
     
-    Circle circle = new Circle(5.0);
-
-
-   System.out.println("Initial radius: " + circle.getRadius());
-
-
-        System.out.println("Initial area: " + circle.calculateArea());
- 
-
-       System.out.println("Initial circumference: " + circle.calculateCircumference());
-
-
-           circle.setRadius(7.0);
-
-  
-             System.out.println("\nUpdated radius: " + circle.getRadius());
-
-        System.out.println("Updated area: " + circle.calculateArea());
-  
-      System.out.println("Updated circumference: " + circle.calculateCircumference());
-
+    main4 obj1= new main4();
+    System.out.println("current date:" + obj1);
     }
-
-}
-
-OUTPUT:
-Initial radius: 5.0
-Initial area: 78.53975
-Initial circumference: 31.4159
-
-Updated radius: 7.0
-Updated area: 153.93791
-Updated circumference: 43.98226
+    }
+    OUTPUT:
+    current date:Tue Sep 10 23:12:21   IST 2024
   </pre>
 </body>
 

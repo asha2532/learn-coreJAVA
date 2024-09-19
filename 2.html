@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,101 +9,19 @@
 
 <body>
   <pre>
-    class Dog
-    {
-    
-    private String name;
- 
-     private String breed;
- 
-  
-    
-        Dog(String name, String breed)
-      {
-   
-       this.name = name;
-  
-        this.breed = breed;
-  
-     }
- 
-   
-    String getName() 
-        {
-  
-        return name;
-    
-     }
- 
-  
-       String getBreed()
-      {
-  
-         return breed;
-   
-     }
- 
-  
-      void setName(String name)
-        {
- 
-         this.name = name;
-    
-     }
- 
-  
-      void setBreed(String breed)
-      {
-  
-        this.breed = breed;
- 
-     }
- 
-  
-   
-    public static void main(String st[])
-      {
-    
-         Dog dog1 = new Dog("maxi", "Golden Retriever");
- 
-         Dog dog2 = new Dog("rubi", "Labrador");
- 
- 
-          System.out.println("Initial values:");
- 
-         System.out.println("Dog 1: " + dog1.getName() + ", " + dog1.getBreed());
- 
-         System.out.println("Dog 2: " + dog2.getName() + ", " + dog2.getBreed());
- 
-  
-       
-       dog1.setName("Charlie");
-   
-       dog1.setBreed("German Shepherd");
-  
-        dog2.setName("Rocky");
-  
-        dog2.setBreed("Poodle");
- 
-   
-     
-     System.out.println("\nUpdated values:");
-  
-        System.out.println("Dog 1: " + dog1.getName() + ", " + dog1.getBreed());
- 
-         System.out.println("Dog 2: " + dog2.getName() + ", " + dog2.getBreed());
-  
-    }
- 
- }
- OUTPUT:
- Initial values:
- Dog 1: maxi,Golden Retriever
- Dog 2: rubi,Labrador
+    import java.util.Date;
 
-Updateed values:
- Dog 1: Charlie,German Shepherd
- Dog 2: Rocky,Poodle
+    class main2
+    {
+    public static void main(String st[])
+    {
+     java.util.Date obj=new java.util.Date();
+    System.out.println("current date:" + obj);
+    }
+    }
+
+    OUTPUT:
+     current date:Tue Sep 10 23:05:16 IST 2024
   </pre>
 </body>
 

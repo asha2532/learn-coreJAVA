@@ -9,95 +9,43 @@
 
 <body>
   <pre>
-    class TrafficLight
+    package mypac1;
+    public class First
     {
-     
-       String color;
-    
-      int duration;
-   
-   
-      TrafficLight(String color, int duration)
+    protected int x=10;
+    protected void printMessage()
     {
-       
-       this.color = color;
-     
-         this.duration = duration;
-   
-       }
-   
-     
-      void changeColor(String newColor) 
-   {
-      
-        this.color = newColor;
-    
+    System.out.println("hello first class..");
+    }
+    }
+  
+
+    //in another file
+    package mypac1;
+    public class Second extends First
+    {
+
+        protected void accessProtected()
+    {
+      System.out.println("x= " + x);
+       printMessage();
       }
-   
     
-          boolean isRed()
-    {
-   
-           return color.equalsIgnoreCase("red");
-   
-       }
-   
-     
-       boolean isGreen() 
+    }
+      import mypackage.Second;
+
+      class main
       {
-   
-           return color.equalsIgnoreCase("green");
-   
-       }
-   
-       
-       void printStatus() 
-   {
-        
-      System.out.println("Traffic Light: " + color + ", Duration: " + duration + " seconds");
-   
-       }
-   
-       
-     public static void main(String st[])
-    {
-     
-          TrafficLight trafficLight = new TrafficLight("red", 30);
-   
-   
-           trafficLight.printStatus();
-   
-         
-         if (trafficLight.isRed()) 
-         {
-            
-      System.out.println("Stop!");
-   
-           }
-   
-         
-   
-           trafficLight.changeColor("green");
-   
-     
-         trafficLight.printStatus();
-   
-    
-            if (trafficLight.isGreen())
-        {
-    
-              System.out.println("Go!");
-     
-         }
-     
-     }
-   
-   }
-   OUTPUT:
-   Traffic Light: red, Duration:30 seconds
-   Stop!
-   Traffic Light: green, Duration:30 seconds
-   Go!
+      public static void main(String st[])
+      {
+      Second obj=new Second();
+      obj.accessProtected();
+      }
+      }
+  
+ OUTPUT:
+  x=10
+  hello first class..
   </pre>
 </body>
 
