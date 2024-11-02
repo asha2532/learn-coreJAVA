@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+
+<body>
+    <pre>
+        import java.awt.*;
+import java.awt.event.*;
+class MyFrame extends Frame
+{
+    TextArea ta = new TextArea(5, 20);
+    MyFrame()
+    {
+        setBounds(100,100,400,400);
+        setLayout(null);
+        ta.setBounds(100,100,100,50);
+        add(ta);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e)
+            {
+                System.exit(1);
+            }
+        });
+        setVisible(true);
+    }
+} 
+ class Main {
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+     OUTPUT:
+     <img src="../img/AWTimg/TextAreaC.png" alt="Label">
+  </pre>
+</body>
+
+</html>

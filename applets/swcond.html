@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World Applet</title>
-    <style>
-        #hello {
-            font-size: 24px;
-            color: #333;
-            margin-top: 20px;
-        }
-    </style>
+    <title>code</title>
 </head>
+
 <body>
     <pre>
-   
-    </pre>
-    OUTPUT:
-   <img src="../img/AppletImg/HW.png" alt="img/">
+      import java.applet.*;
+      import java.awt.*;
+      public class HelloWorld extends Applet{
+          public void paint(Graphics g)
+          {
+              g.drawString("Hello World!", 100, 100);
+          }
+      }
+      /*
+       <applet code = "HelloWorld.class" width = "300" height= "500">&lt;/applet&gt;
+       */
+  </pre>
 </body>
+
 </html>

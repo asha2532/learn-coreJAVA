@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circle Applet</title>
-    <style>
-        #hello {
-            font-size: 24px;
-            color: #333;
-            margin-top: 20px;
-        }
-    </style>
+    <title>code</title>
 </head>
+
 <body>
     <pre>
-
-    </pre>
-    OUTPUT:
-    <img src="../img/AppletImg/circle.png" alt="circle">
+        
+      import java.applet.Applet;
+      import java.awt.Graphics;
+      
+      /**
+       * SmileFace
+       */
+      public class SmileFace extends Applet{
+          public void paint(Graphics g)
+          {
+              g.drawOval(100, 100, 200, 200);
+              g.drawOval(150, 150, 20, 20);
+              g.drawOval(230, 150, 20, 20);
+              g.drawArc(150, 200, 100, 50, 200, 150);
+          }
+      }
+      /*
+       <applet code = "smileface.SmileFace.class" width = "300" height= "500">&lt;/applet&gt;
+       */
+       OUTPUT:
+<img src="../img/AppletImg/bgcolor.png" alt="Line">
+  </pre>
 </body>
+
 </html>

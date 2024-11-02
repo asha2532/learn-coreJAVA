@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+
+<body>
+    <pre>
+      import java.io.*;
+      import java.sql.*;
+      
+      class jdbc7{
+      public static void main (String args[]) throws ClassNotFoundException,java.sql.SQLException,java.io.IOException{
+      Class.forName("com.mysql.jdbc.Driver");
+      Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/madhu","root","root");
+      Statement st=con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
+      BufferedReader scan=new BufferedReader(new InputStreamReader(System.in)); 
+      System.out.println("Enter row number for the data to display:");
+      int row=Integer.parseInt(scan.readLine());
+      ResultSet view=st.executeQuery("select * from student ");
+      view.absolute(row);
+      System.out.println(" Data is :");
+      System.out.println(view.getString(1)+" "+view.getString(2));
+      }}
+      
+      OUTPUT
+      
+      
+      
+      Enter row number for the data to display:
+      1
+       Data is :
+      1 asha
+  </pre>
+</body>
+
+</html>

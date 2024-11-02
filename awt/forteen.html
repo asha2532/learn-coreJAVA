@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+
+<body>
+    <pre>
+      import java.awt.*;
+      import java.awt.event.*;
+      class MyFrame extends Frame
+      {
+          List li = new List();
+          MyFrame()
+          {
+              setBounds(100,100,400,400);
+              setLayout(new FlowLayout(FlowLayout.LEFT));
+              
+              li.add("Apple");
+              li.add("Mango");
+              li.add("Orange");
+              li.add("Grapes");
+              li.add("Pear");
+              li.add("Coconut");
+              add(li);
+              addWindowListener(new WindowAdapter() {
+                  public void windowClosing(WindowEvent e)
+                  {
+                      System.exit(1);
+                  }
+              });
+              setVisible(true);
+          }
+      } 
+       class Main {
+          public static void main(String[] args) {
+              new MyFrame();
+          }
+      }
+           OUTPUT:
+           <img src="../img/AWTimg/List.png" alt="Label">
+  </pre>
+</body>
+
+</html>

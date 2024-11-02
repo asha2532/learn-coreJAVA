@@ -1,22 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circle Applet</title>
-    <style>
-        #hello {
-            font-size: 24px;
-            color: #333;
-            margin-top: 20px;
-        }
-    </style>
+    <title>code</title>
 </head>
+
 <body>
     <pre>
-
-    </pre>
-    OUTPUT:
-    <img src="../img/AppletImg/circle.png" alt="circle">
+        import java.applet.Applet;
+        import java.awt.*;
+        import java.awt.event.*;
+        
+        public class FontApplet extends Applet implements ItemListener {
+            private String fontName = "Serif";
+            private int fontStyle = Font.PLAIN;
+            private int fontSize = 20;
+        
+            private Label sampleText;
+            private Choice fontNameChoice, fontStyleChoice, fontSizeChoice;
+        
+            public void init() {
+                // Set layout
+                setLayout(new FlowLayout());
+        
+                // Sample text label
+                sampleText = new Label("Sample Text");
+                sampleText.setFont(new Font(fontName, fontStyle, fontSize));
+                add(sampleText);
+        
+                // Font name choice
+                fontNameChoice = new Choice();
+                fontNameChoice.add("Serif");
+                fontNameChoice.add("SansSerif");
+                fontNameChoice.add("Monospaced");
+                fontNameChoice.add("Dialog");
+                fontNameChoice.add("DialogInput");
+                fontNameChoice.addItemListener(this);
+                add(new Label("Font:"));
+                add(fontNameChoice);
+        
+                // Font style choice
+                fontStyleChoice = new Choice();
+                fontStyleChoice.add("Plain");
+                fontStyleChoice.add("Bold");
+                fontStyleChoice.add("Italic");
+                fontStyleChoice.addItemListener(this);
+                add(new Label("Style:"));
+                add(fontStyleChoice);
+        
+                // Font size choice
+                fontSizeChoice = new Choice();
+                for (int i = 12; i <= 36; i += 2) {
+                    fontSizeChoice.add(String.valueOf(i));
+                }
+                fontSizeChoice.select("20");  // Default selection
+                fontSizeChoice.addItemListener(this);
+                add(new Label("Size:"));
+                add(fontSizeChoice);
+            }
+        
+            public void itemStateChanged(ItemEvent e) {
+                // Update font based on selections
+                fontName = fontNameChoice.getSelectedItem();
+        
+                String style = fontStyleChoice.getSelectedItem();
+                switch (style) {
+                    case "Bold":
+                        fontStyle = Font.BOLD;
+                        break;
+                    case "Italic":
+                        fontStyle = Font.ITALIC;
+                        break;
+                    default:
+                        fontStyle = Font.PLAIN;
+                        break;
+                }
+        
+                fontSize = Integer.parseInt(fontSizeChoice.getSelectedItem());
+        
+                // Apply new font to sample text
+                sampleText.setFont(new Font(fontName, fontStyle, fontSize));
+                repaint();
+            }
+        }
+        Output
+        
+        
+  </pre>
 </body>
+
 </html>
